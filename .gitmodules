@@ -1,0 +1,3 @@
+[submodule "eshop"]
+	path = eshop
+	url = https://github.com/DuyITLOR/group05_eshop.git
