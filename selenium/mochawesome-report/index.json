@@ -1,0 +1,785 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 25,
+    "passes": 4,
+    "pending": 0,
+    "failures": 21,
+    "start": "2026-07-15T15:36:41.162Z",
+    "end": "2026-07-15T15:37:47.780Z",
+    "duration": 66618,
+    "testsRegistered": 25,
+    "passPercent": 16,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d8da40a2-eb02-428e-8654-7a8f01317a53",
+      "title": "",
+      "fullFile": "D:\\demo_automation_web\\selenium\\tests\\FR-01.register.test.ts",
+      "file": "\\tests\\FR-01.register.test.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "79df62e1-adfe-4d71-a0c6-0e687cf44db9",
+          "title": "FR-01: Đăng ký tài khoản (Account Registration)",
+          "fullFile": "D:\\demo_automation_web\\selenium\\tests\\FR-01.register.test.ts",
+          "file": "\\tests\\FR-01.register.test.ts",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"FR-01: Đăng ký tài khoản (Account Registration)\"",
+              "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) \"before each\" hook in \"FR-01: Đăng ký tài khoản (Account Registration)\"",
+              "timedOut": false,
+              "duration": 598,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0,import_db.resetDatabase)();driver=await(0,import_driver.createDriver)()",
+              "err": {},
+              "uuid": "d929e01e-ec1d-43e5-a7fe-55f365480de4",
+              "parentUUID": "79df62e1-adfe-4d71-a0c6-0e687cf44db9",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"FR-01: Đăng ký tài khoản (Account Registration)\"",
+              "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) \"after each\" hook in \"FR-01: Đăng ký tài khoản (Account Registration)\"",
+              "timedOut": false,
+              "duration": 30,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if(driver){await driver.quit()}",
+              "err": {},
+              "uuid": "d78e90f1-d449-41a5-8ed4-6d8fb6b6ac5d",
+              "parentUUID": "79df62e1-adfe-4d71-a0c6-0e687cf44db9",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+              "title": "1. Single transitions (0-switch)",
+              "fullFile": "D:\\demo_automation_web\\selenium\\tests\\FR-01.register.test.ts",
+              "file": "\\tests\\FR-01.register.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "TC-FR-01-001: Nhập dữ liệu không hợp lệ từ trạng thái rỗng",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-001: Nhập dữ liệu không hợp lệ từ trạng thái rỗng",
+                  "timedOut": false,
+                  "duration": 530,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-001-2026-07-15T15-36-42-339Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-001\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Nhập Email sai định dạng từ trạng thái rỗng và kiểm tra lỗi validation.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Hiển thị lỗi email không hợp lệ và nút Đăng ký bị vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Nút đăng ký phải bị vô hiệu hóa khi email không hợp lệ: expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-001\";const desc=\"Nh\\u1EADp Email sai \\u0111\\u1ECBnh d\\u1EA1ng t\\u1EEB tr\\u1EA1ng th\\xE1i r\\u1ED7ng v\\xE0 ki\\u1EC3m tra l\\u1ED7i validation.\";const expected=\"Hi\\u1EC3n th\\u1ECB l\\u1ED7i email kh\\xF4ng h\\u1EE3p l\\u1EC7 v\\xE0 n\\xFAt \\u0110\\u0103ng k\\xFD b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng hi\\u1EC3n th\\u1ECB l\\u1ED7i ho\\u1EB7c n\\xFAt \\u0111\\u0103ng k\\xFD kh\\xF4ng b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);const emailInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\"));await emailInput.sendKeys(\"invalidemail\");const nameInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\"));await nameInput.sendKeys(\"Test\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");let errorText=\"\";try{const errorDiv=await driver.findElement(import_selenium_webdriver.By.className(\"bg-red-100\"));errorText=await errorDiv.getText()}catch(e){}(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt \\u0111\\u0103ng k\\xFD ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a khi email kh\\xF4ng h\\u1EE3p l\\u1EC7\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Nút đăng ký phải bị vô hiệu hóa khi email không hợp lệ: expected null to equal 'true'",
+                    "estack": "AssertionError: Nút đăng ký phải bị vô hiệu hóa khi email không hợp lệ: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:49:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:30:7)",
+                    "diff": null
+                  },
+                  "uuid": "d3df41a5-c5b4-4e5d-a114-a5423a0c10a6",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-002: Nhập dữ liệu hợp lệ từ trạng thái rỗng",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-002: Nhập dữ liệu hợp lệ từ trạng thái rỗng",
+                  "timedOut": false,
+                  "duration": 463,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tcId=\"TC-FR-01-002\";const desc=\"Nh\\u1EADp \\u0111\\u1EA7y \\u0111\\u1EE7 th\\xF4ng tin h\\u1EE3p l\\u1EC7 t\\u1EEB tr\\u1EA1ng th\\xE1i r\\u1ED7ng.\";const expected=\"Form kh\\xF4ng c\\xF2n l\\u1ED7i v\\xE0 n\\xFAt \\u0111\\u0103ng k\\xFD \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"N\\xFAt submit b\\u1ECB kh\\xF3a ho\\u1EB7c form b\\xE1o l\\u1ED7i\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van A\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"new_user@domain.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.not.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t khi \\u0111i\\u1EC1n \\u0111\\xFAng th\\xF4ng tin.\")},driver)",
+                  "err": {},
+                  "uuid": "1dac3b1c-045a-4a51-84fb-2a08d8ad46b1",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-003: Cập nhật dữ liệu không hợp lệ từ trạng thái không hợp lệ",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-003: Cập nhật dữ liệu không hợp lệ từ trạng thái không hợp lệ",
+                  "timedOut": false,
+                  "duration": 453,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-003-2026-07-15T15-36-44-536Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-003\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Nhập mật khẩu yếu từ trạng thái email không hợp lệ.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Hiển thị lỗi độ mạnh mật khẩu và nút Đăng ký tiếp tục bị vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Phải hiển thị lỗi độ mạnh mật khẩu: expected '' to include 'Mật khẩu'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-003\";const desc=\"Nh\\u1EADp m\\u1EADt kh\\u1EA9u y\\u1EBFu t\\u1EEB tr\\u1EA1ng th\\xE1i email kh\\xF4ng h\\u1EE3p l\\u1EC7.\";const expected=\"Hi\\u1EC3n th\\u1ECB l\\u1ED7i \\u0111\\u1ED9 m\\u1EA1nh m\\u1EADt kh\\u1EA9u v\\xE0 n\\xFAt \\u0110\\u0103ng k\\xFD ti\\u1EBFp t\\u1EE5c b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng c\\u1EADp nh\\u1EADt l\\u1ED7i m\\u1EADt kh\\u1EA9u ho\\u1EB7c n\\xFAt \\u0111\\u0103ng k\\xFD \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"invalidemail\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"123\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");let errorText=\"\";try{const errorDiv=await driver.findElement(import_selenium_webdriver.By.className(\"bg-red-100\"));errorText=await errorDiv.getText()}catch(e){}(0,import_chai.expect)(errorText).to.contain(\"M\\u1EADt kh\\u1EA9u\",\"Ph\\u1EA3i hi\\u1EC3n th\\u1ECB l\\u1ED7i \\u0111\\u1ED9 m\\u1EA1nh m\\u1EADt kh\\u1EA9u\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt \\u0111\\u0103ng k\\xFD ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Phải hiển thị lỗi độ mạnh mật khẩu: expected '' to include 'Mật khẩu'",
+                    "estack": "AssertionError: Phải hiển thị lỗi độ mạnh mật khẩu: expected '' to include 'Mật khẩu'\n    at <anonymous> (tests\\FR-01.register.test.ts:92:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:77:7)",
+                    "diff": null
+                  },
+                  "uuid": "989ab66f-2969-447b-a5ad-ce779a4929ba",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-004: Cập nhật dữ liệu hợp lệ từ trạng thái không hợp lệ",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-004: Cập nhật dữ liệu hợp lệ từ trạng thái không hợp lệ",
+                  "timedOut": false,
+                  "duration": 311,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-004-2026-07-15T15-36-45-545Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-004\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Form thiếu xác nhận mật khẩu, điền xác nhận mật khẩu khớp để chuyển sang sẵn sàng.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Ẩn các thông báo lỗi và nút Đăng ký được kích hoạt.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"no such element: Unable to locate element: {\\\"method\\\":\\\"xpath\\\",\\\"selector\\\":\\\"//label[contains(text(), 'Xác nhận')]/following-sibling::input\\\"}\\n  (Session info: chrome=150.0.7871.124)\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-004\";const desc=\"Form thi\\u1EBFu x\\xE1c nh\\u1EADn m\\u1EADt kh\\u1EA9u, \\u0111i\\u1EC1n x\\xE1c nh\\u1EADn m\\u1EADt kh\\u1EA9u kh\\u1EDBp \\u0111\\u1EC3 chuy\\u1EC3n sang s\\u1EB5n s\\xE0ng.\";const expected=\"\\u1EA8n c\\xE1c th\\xF4ng b\\xE1o l\\u1ED7i v\\xE0 n\\xFAt \\u0110\\u0103ng k\\xFD \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng t\\xECm th\\u1EA5y tr\\u01B0\\u1EDDng X\\xE1c nh\\u1EADn m\\u1EADt kh\\u1EA9u ho\\u1EB7c n\\xFAt \\u0111\\u0103ng k\\xFD kh\\xF4ng \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van A\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"new_user@domain.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const confirmPasswordInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'X\\xE1c nh\\u1EADn')]/following-sibling::input\"));await confirmPasswordInput.sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.not.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t khi \\u0111i\\u1EC1n \\u0111\\xFAng th\\xF4ng tin.\")},driver)",
+                  "err": {
+                    "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//label[contains(text(), 'Xác nhận')]/following-sibling::input\"}\n  (Session info: chrome=150.0.7871.124)",
+                    "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//label[contains(text(), 'Xác nhận')]/following-sibling::input\"}\n  (Session info: chrome=150.0.7871.124)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:527:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:459:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async <anonymous> (tests\\FR-01.register.test.ts:110:38)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:102:7)",
+                    "diff": null
+                  },
+                  "uuid": "6e747562-e411-4be5-b4a3-f1ee408eb014",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-005: Xóa sạch form từ trạng thái không hợp lệ",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-005: Xóa sạch form từ trạng thái không hợp lệ",
+                  "timedOut": false,
+                  "duration": 285,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-005-2026-07-15T15-36-46-485Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-005\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Tải lại trang từ trạng thái không hợp lệ.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Các trường nhập liệu trống, lỗi bị ẩn, nút Đăng ký vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Nút đăng ký phải bị vô hiệu hóa sau khi reload.: expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-005\";const desc=\"T\\u1EA3i l\\u1EA1i trang t\\u1EEB tr\\u1EA1ng th\\xE1i kh\\xF4ng h\\u1EE3p l\\u1EC7.\";const expected=\"C\\xE1c tr\\u01B0\\u1EDDng nh\\u1EADp li\\u1EC7u tr\\u1ED1ng, l\\u1ED7i b\\u1ECB \\u1EA9n, n\\xFAt \\u0110\\u0103ng k\\xFD v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"C\\xE1c tr\\u01B0\\u1EDDng v\\u1EABn l\\u01B0u gi\\xE1 tr\\u1ECB ho\\u1EB7c l\\u1ED7i kh\\xF4ng b\\u1ECB \\u1EA9n\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"invalidemail\");await driver.navigate().refresh();const emailVal=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).getAttribute(\"value\");(0,import_chai.expect)(emailVal).to.equal(\"\",\"Tr\\u01B0\\u1EDDng email ph\\u1EA3i \\u0111\\u01B0\\u1EE3c x\\xF3a s\\u1EA1ch sau khi reload.\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt \\u0111\\u0103ng k\\xFD ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a sau khi reload.\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Nút đăng ký phải bị vô hiệu hóa sau khi reload.: expected null to equal 'true'",
+                    "estack": "AssertionError: Nút đăng ký phải bị vô hiệu hóa sau khi reload.: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:138:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:125:7)",
+                    "diff": null
+                  },
+                  "uuid": "4ad04089-d1be-4f98-a894-d302aba3c558",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-006: Nhập dữ liệu không hợp lệ từ trạng thái sẵn sàng",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-006: Nhập dữ liệu không hợp lệ từ trạng thái sẵn sàng",
+                  "timedOut": false,
+                  "duration": 547,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-006-2026-07-15T15-36-47-674Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-006\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Xóa bớt Họ Tên khi đang ở trạng thái sẵn sàng.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Hiển thị lỗi thiếu Họ Tên và nút Đăng ký lập tức bị vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Nút đăng ký phải bị vô hiệu hóa khi thiếu Họ Tên.: expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-006\";const desc=\"X\\xF3a b\\u1EDBt H\\u1ECD T\\xEAn khi \\u0111ang \\u1EDF tr\\u1EA1ng th\\xE1i s\\u1EB5n s\\xE0ng.\";const expected=\"Hi\\u1EC3n th\\u1ECB l\\u1ED7i thi\\u1EBFu H\\u1ECD T\\xEAn v\\xE0 n\\xFAt \\u0110\\u0103ng k\\xFD l\\u1EADp t\\u1EE9c b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"N\\xFAt submit v\\u1EABn \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t ho\\u1EB7c kh\\xF4ng b\\xE1o l\\u1ED7i\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);const nameInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\"));await nameInput.sendKeys(\"Nguyen Van A\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"new_user@domain.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");await nameInput.clear();const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt \\u0111\\u0103ng k\\xFD ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a khi thi\\u1EBFu H\\u1ECD T\\xEAn.\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Nút đăng ký phải bị vô hiệu hóa khi thiếu Họ Tên.: expected null to equal 'true'",
+                    "estack": "AssertionError: Nút đăng ký phải bị vô hiệu hóa khi thiếu Họ Tên.: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:161:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:147:7)",
+                    "diff": null
+                  },
+                  "uuid": "b52e025f-2ea9-4d4c-a0b6-8ce24e7c676f",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-007: Đăng ký thành công với email chưa tồn tại",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-007: Đăng ký thành công với email chưa tồn tại",
+                  "timedOut": false,
+                  "duration": 5488,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-007-2026-07-15T15-36-53-796Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-007\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Đăng ký tài khoản mới bằng thông tin hợp lệ (bản tin chưa tồn tại).\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Chuyển hướng người dùng sang trang Đăng nhập (/login) và hiển thị thành công.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Waiting for URL to contain \\\"/login\\\"\\nWait timed out after 5137ms\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-007\";const desc=\"\\u0110\\u0103ng k\\xFD t\\xE0i kho\\u1EA3n m\\u1EDBi b\\u1EB1ng th\\xF4ng tin h\\u1EE3p l\\u1EC7 (b\\u1EA3n tin ch\\u01B0a t\\u1ED3n t\\u1EA1i).\";const expected=\"Chuy\\u1EC3n h\\u01B0\\u1EDBng ng\\u01B0\\u1EDDi d\\xF9ng sang trang \\u0110\\u0103ng nh\\u1EADp (/login) v\\xE0 hi\\u1EC3n th\\u1ECB th\\xE0nh c\\xF4ng.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng chuy\\u1EC3n h\\u01B0\\u1EDBng sang /login ho\\u1EB7c b\\xE1o l\\u1ED7i\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van A\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"new_unique_user@domain.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test1234!\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();await driver.wait(import_selenium_webdriver.until.urlContains(\"/login\"),5e3);const currentUrl=await driver.getCurrentUrl();(0,import_chai.expect)(currentUrl).to.contain(\"/login\")},driver)",
+                  "err": {
+                    "message": "TimeoutError: Waiting for URL to contain \"/login\"\nWait timed out after 5137ms",
+                    "estack": "TimeoutError: Waiting for URL to contain \"/login\"\nWait timed out after 5137ms\n    at D:\\demo_automation_web\\selenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+                    "diff": null
+                  },
+                  "uuid": "95a5b34b-589a-4ee2-b299-289e76a8a934",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-008: Đăng ký thất bại với email đã tồn tại",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-008: Đăng ký thất bại với email đã tồn tại",
+                  "timedOut": false,
+                  "duration": 5547,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-008-2026-07-15T15-37-00-002Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-008\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Đăng ký tài khoản mới bằng email đã tồn tại (test@eshop.com).\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Thông báo lỗi \\\"Email đã tồn tại\\\" hiển thị trên giao diện và nút Đăng ký vẫn ở trạng thái sẵn sàng sửa đổi.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Waiting for element to be located By(css selector, .bg-red-100)\\nWait timed out after 5009ms\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-008\";const desc=\"\\u0110\\u0103ng k\\xFD t\\xE0i kho\\u1EA3n m\\u1EDBi b\\u1EB1ng email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i (test@eshop.com).\";const expected='Th\\xF4ng b\\xE1o l\\u1ED7i \"Email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i\" hi\\u1EC3n th\\u1ECB tr\\xEAn giao di\\u1EC7n v\\xE0 n\\xFAt \\u0110\\u0103ng k\\xFD v\\u1EABn \\u1EDF tr\\u1EA1ng th\\xE1i s\\u1EB5n s\\xE0ng s\\u1EEDa \\u0111\\u1ED5i.';await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng hi\\u1EC3n th\\u1ECB th\\xF4ng b\\xE1o l\\u1ED7i tr\\xF9ng email\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van B\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"test@eshop.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();const errorDiv=await driver.wait(import_selenium_webdriver.until.elementLocated(import_selenium_webdriver.By.className(\"bg-red-100\")),5e3);const errorText=await errorDiv.getText();(0,import_chai.expect)(errorText).to.contain(\"Email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i\",\"Ph\\u1EA3i hi\\u1EC3n th\\u1ECB th\\xF4ng b\\xE1o tr\\xF9ng email\")},driver)",
+                  "err": {
+                    "message": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5009ms",
+                    "estack": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5009ms\n    at D:\\demo_automation_web\\selenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+                    "diff": null
+                  },
+                  "uuid": "db3c9ccb-9958-45f8-ade8-be2263d741e0",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-009: Xóa sạch form từ trạng thái sẵn sàng",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-009: Xóa sạch form từ trạng thái sẵn sàng",
+                  "timedOut": false,
+                  "duration": 582,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-009-2026-07-15T15-37-01-194Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-009\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Tải lại trang từ trạng thái sẵn sàng.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Form trống hoàn toàn, nút Đăng ký bị vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Nút đăng ký phải bị vô hiệu hóa sau reload: expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-009\";const desc=\"T\\u1EA3i l\\u1EA1i trang t\\u1EEB tr\\u1EA1ng th\\xE1i s\\u1EB5n s\\xE0ng.\";const expected=\"Form tr\\u1ED1ng ho\\xE0n to\\xE0n, n\\xFAt \\u0110\\u0103ng k\\xFD b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Form v\\u1EABn ch\\u1EE9a th\\xF4ng tin c\\u0169\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van A\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"new_user@domain.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");await driver.navigate().refresh();const nameVal=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).getAttribute(\"value\");(0,import_chai.expect)(nameVal).to.equal(\"\",\"H\\u1ECD t\\xEAn ph\\u1EA3i \\u0111\\u01B0\\u1EE3c x\\xF3a sau reload\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt \\u0111\\u0103ng k\\xFD ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a sau reload\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Nút đăng ký phải bị vô hiệu hóa sau reload: expected null to equal 'true'",
+                    "estack": "AssertionError: Nút đăng ký phải bị vô hiệu hóa sau reload: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:226:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:212:7)",
+                    "diff": null
+                  },
+                  "uuid": "bed62854-c6dd-445a-b8b7-675b07f0c0d3",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-010: Nhập dữ liệu không hợp lệ sau khi lỗi trùng email",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-010: Nhập dữ liệu không hợp lệ sau khi lỗi trùng email",
+                  "timedOut": false,
+                  "duration": 5484,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-010-2026-07-15T15-37-07-313Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-010\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Nhập mật khẩu xác nhận không khớp sau khi có lỗi trùng email.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Thông báo lỗi xác nhận mật khẩu không khớp xuất hiện, nút Đăng ký vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Waiting for element to be located By(css selector, .bg-red-100)\\nWait timed out after 5159ms\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-010\";const desc=\"Nh\\u1EADp m\\u1EADt kh\\u1EA9u x\\xE1c nh\\u1EADn kh\\xF4ng kh\\u1EDBp sau khi c\\xF3 l\\u1ED7i tr\\xF9ng email.\";const expected=\"Th\\xF4ng b\\xE1o l\\u1ED7i x\\xE1c nh\\u1EADn m\\u1EADt kh\\u1EA9u kh\\xF4ng kh\\u1EDBp xu\\u1EA5t hi\\u1EC7n, n\\xFAt \\u0110\\u0103ng k\\xFD v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng t\\xECm th\\u1EA5y tr\\u01B0\\u1EDDng X\\xE1c nh\\u1EADn m\\u1EADt kh\\u1EA9u ho\\u1EB7c kh\\xF4ng c\\xF3 l\\u1ED7i\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van B\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"test@eshop.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();await driver.wait(import_selenium_webdriver.until.elementLocated(import_selenium_webdriver.By.className(\"bg-red-100\")),5e3);const confirmPasswordInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'X\\xE1c nh\\u1EADn')]/following-sibling::input\"));await confirmPasswordInput.sendKeys(\"MismatchedPass123!\");const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt \\u0111\\u0103ng k\\xFD ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\")},driver)",
+                  "err": {
+                    "message": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5159ms",
+                    "estack": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5159ms\n    at D:\\demo_automation_web\\selenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+                    "diff": null
+                  },
+                  "uuid": "7bbeb13b-11c9-4b35-82af-1aa55bd2c48f",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-011: Thay đổi email hợp lệ sau khi lỗi trùng email",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-011: Thay đổi email hợp lệ sau khi lỗi trùng email",
+                  "timedOut": false,
+                  "duration": 5734,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-011-2026-07-15T15-37-13-683Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-011\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Sửa email trùng thành email mới chưa tồn tại.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Ẩn thông báo lỗi trùng email cũ, nút Đăng ký được kích hoạt lại.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Waiting for element to be located By(css selector, .bg-red-100)\\nWait timed out after 5203ms\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-011\";const desc=\"S\\u1EEDa email tr\\xF9ng th\\xE0nh email m\\u1EDBi ch\\u01B0a t\\u1ED3n t\\u1EA1i.\";const expected=\"\\u1EA8n th\\xF4ng b\\xE1o l\\u1ED7i tr\\xF9ng email c\\u0169, n\\xFAt \\u0110\\u0103ng k\\xFD \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t l\\u1EA1i.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng \\u1EA9n l\\u1ED7i tr\\xF9ng email ho\\u1EB7c n\\xFAt kh\\xF4ng \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van B\");const emailInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\"));await emailInput.sendKeys(\"test@eshop.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();const errorDiv=await driver.wait(import_selenium_webdriver.until.elementLocated(import_selenium_webdriver.By.className(\"bg-red-100\")),5e3);await emailInput.clear();await emailInput.sendKeys(\"fixed_user@domain.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).click();let isErrorVisible=true;try{const text=await errorDiv.getText();if(!text.includes(\"Email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i\"))isErrorVisible=false}catch(e){isErrorVisible=false}(0,import_chai.expect)(isErrorVisible).to.be.false;const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.not.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t l\\u1EA1i.\")},driver)",
+                  "err": {
+                    "message": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5203ms",
+                    "estack": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5203ms\n    at D:\\demo_automation_web\\selenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+                    "diff": null
+                  },
+                  "uuid": "cf0b7682-27c3-4478-8ce2-6b233b4819a5",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-012: Xóa sạch form sau khi lỗi trùng email",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 1. Single transitions (0-switch) TC-FR-01-012: Xóa sạch form sau khi lỗi trùng email",
+                  "timedOut": false,
+                  "duration": 5523,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-012-2026-07-15T15-37-19-842Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-012\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Reload trang sau khi bị báo lỗi email đã tồn tại.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Form trống hoàn toàn, ẩn lỗi cũ, nút Đăng ký bị vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Waiting for element to be located By(css selector, .bg-red-100)\\nWait timed out after 5191ms\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-012\";const desc=\"Reload trang sau khi b\\u1ECB b\\xE1o l\\u1ED7i email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i.\";const expected=\"Form tr\\u1ED1ng ho\\xE0n to\\xE0n, \\u1EA9n l\\u1ED7i c\\u0169, n\\xFAt \\u0110\\u0103ng k\\xFD b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Th\\xF4ng tin ho\\u1EB7c l\\u1ED7i v\\u1EABn hi\\u1EC3n th\\u1ECB sau reload\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van B\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"test@eshop.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();await driver.wait(import_selenium_webdriver.until.elementLocated(import_selenium_webdriver.By.className(\"bg-red-100\")),5e3);await driver.navigate().refresh();const emailVal=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).getAttribute(\"value\");(0,import_chai.expect)(emailVal).to.equal(\"\");let errorText=\"\";try{const errorDiv=await driver.findElement(import_selenium_webdriver.By.className(\"bg-red-100\"));errorText=await errorDiv.getText()}catch(e){}(0,import_chai.expect)(errorText).to.not.contain(\"Email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i\");const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i b\\u1ECB disabled sau reload.\")},driver)",
+                  "err": {
+                    "message": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5191ms",
+                    "estack": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5191ms\n    at D:\\demo_automation_web\\selenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+                    "diff": null
+                  },
+                  "uuid": "de3c74cf-a094-411a-8301-d0a27123cf87",
+                  "parentUUID": "d24a9d2a-ed8d-4b89-800f-1be7ba5877c3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1dac3b1c-045a-4a51-84fb-2a08d8ad46b1"
+              ],
+              "failures": [
+                "d3df41a5-c5b4-4e5d-a114-a5423a0c10a6",
+                "989ab66f-2969-447b-a5ad-ce779a4929ba",
+                "6e747562-e411-4be5-b4a3-f1ee408eb014",
+                "4ad04089-d1be-4f98-a894-d302aba3c558",
+                "b52e025f-2ea9-4d4c-a0b6-8ce24e7c676f",
+                "95a5b34b-589a-4ee2-b299-289e76a8a934",
+                "db3c9ccb-9958-45f8-ade8-be2263d741e0",
+                "bed62854-c6dd-445a-b8b7-675b07f0c0d3",
+                "7bbeb13b-11c9-4b35-82af-1aa55bd2c48f",
+                "cf0b7682-27c3-4478-8ce2-6b233b4819a5",
+                "de3c74cf-a094-411a-8301-d0a27123cf87"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 30947,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "13748098-2dd8-48a5-83ea-ffb737075c3a",
+              "title": "2. Invalid transitions",
+              "fullFile": "D:\\demo_automation_web\\selenium\\tests\\FR-01.register.test.ts",
+              "file": "\\tests\\FR-01.register.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "TC-FR-01-013: Bấm Đăng ký khi form rỗng",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 2. Invalid transitions TC-FR-01-013: Bấm Đăng ký khi form rỗng",
+                  "timedOut": false,
+                  "duration": 159,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-013-2026-07-15T15-37-20-663Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-013\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Cố gắng submit form khi rỗng.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Hệ thống chặn submit, không gửi request API.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Nút submit phải bị vô hiệu hóa.: expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-013\";const desc=\"C\\u1ED1 g\\u1EAFng submit form khi r\\u1ED7ng.\";const expected=\"H\\u1EC7 th\\u1ED1ng ch\\u1EB7n submit, kh\\xF4ng g\\u1EEDi request API.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Form \\u0111\\u01B0\\u1EE3c submit ho\\u1EB7c kh\\xF4ng b\\u1ECB ch\\u1EB7n\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Nút submit phải bị vô hiệu hóa.: expected null to equal 'true'",
+                    "estack": "AssertionError: Nút submit phải bị vô hiệu hóa.: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:346:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:341:7)",
+                    "diff": null
+                  },
+                  "uuid": "c7a6440e-b652-4332-ba03-821af93c3472",
+                  "parentUUID": "13748098-2dd8-48a5-83ea-ffb737075c3a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-014: Bấm Đăng ký khi form chứa dữ liệu không hợp lệ",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 2. Invalid transitions TC-FR-01-014: Bấm Đăng ký khi form chứa dữ liệu không hợp lệ",
+                  "timedOut": false,
+                  "duration": 218,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-014-2026-07-15T15-37-21-465Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-014\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Cố gắng submit khi email không đúng định dạng.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Không gửi API đi, giữ nguyên trạng thái lỗi và vô hiệu hóa nút submit.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Nút submit phải bị vô hiệu hóa.: expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-014\";const desc=\"C\\u1ED1 g\\u1EAFng submit khi email kh\\xF4ng \\u0111\\xFAng \\u0111\\u1ECBnh d\\u1EA1ng.\";const expected=\"Kh\\xF4ng g\\u1EEDi API \\u0111i, gi\\u1EEF nguy\\xEAn tr\\u1EA1ng th\\xE1i l\\u1ED7i v\\xE0 v\\xF4 hi\\u1EC7u h\\xF3a n\\xFAt submit.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Form g\\u1EEDi API ho\\u1EB7c n\\xFAt submit kh\\xF4ng b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"invalidemail\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Nút submit phải bị vô hiệu hóa.: expected null to equal 'true'",
+                    "estack": "AssertionError: Nút submit phải bị vô hiệu hóa.: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:362:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:355:7)",
+                    "diff": null
+                  },
+                  "uuid": "a50e32b1-fb56-4f2d-af42-104b821dec7f",
+                  "parentUUID": "13748098-2dd8-48a5-83ea-ffb737075c3a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-015: Bấm Đăng ký lại mà không sửa email đã trùng",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 2. Invalid transitions TC-FR-01-015: Bấm Đăng ký lại mà không sửa email đã trùng",
+                  "timedOut": false,
+                  "duration": 5489,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-015-2026-07-15T15-37-27-600Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-015\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Click submit lần nữa khi đang có thông báo lỗi email đã tồn tại.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Nút submit bị khóa hoặc lỗi trùng email vẫn được hiển thị, không gửi thêm API.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Waiting for element to be located By(css selector, .bg-red-100)\\nWait timed out after 5187ms\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-015\";const desc=\"Click submit l\\u1EA7n n\\u1EEFa khi \\u0111ang c\\xF3 th\\xF4ng b\\xE1o l\\u1ED7i email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i.\";const expected=\"N\\xFAt submit b\\u1ECB kh\\xF3a ho\\u1EB7c l\\u1ED7i tr\\xF9ng email v\\u1EABn \\u0111\\u01B0\\u1EE3c hi\\u1EC3n th\\u1ECB, kh\\xF4ng g\\u1EEDi th\\xEAm API.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"G\\u1EEDi th\\xEAm API ho\\u1EB7c kh\\xF4ng hi\\u1EC3n th\\u1ECB l\\u1ED7i\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van B\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"test@eshop.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();await driver.wait(import_selenium_webdriver.until.elementLocated(import_selenium_webdriver.By.className(\"bg-red-100\")),5e3);await submitBtn.click();const submitBtnDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(submitBtnDisabled).to.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a sau l\\u1ED7i.\")},driver)",
+                  "err": {
+                    "message": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5187ms",
+                    "estack": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5187ms\n    at D:\\demo_automation_web\\selenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+                    "diff": null
+                  },
+                  "uuid": "7b19b672-143d-47ec-983a-7b053e02905d",
+                  "parentUUID": "13748098-2dd8-48a5-83ea-ffb737075c3a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "c7a6440e-b652-4332-ba03-821af93c3472",
+                "a50e32b1-fb56-4f2d-af42-104b821dec7f",
+                "7b19b672-143d-47ec-983a-7b053e02905d"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 5866,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "ec4f907f-d56f-48cd-9f77-5a3ee574f66c",
+              "title": "3. 1-switch (Cặp transition liên tiếp)",
+              "fullFile": "D:\\demo_automation_web\\selenium\\tests\\FR-01.register.test.ts",
+              "file": "\\tests\\FR-01.register.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "TC-FR-01-020: Đang nhập sai tiếp tục sửa sai (T1 -> T3)",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 3. 1-switch (Cặp transition liên tiếp) TC-FR-01-020: Đang nhập sai tiếp tục sửa sai (T1 -> T3)",
+                  "timedOut": false,
+                  "duration": 267,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-020-2026-07-15T15-37-28-460Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-020\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"T1 (Nhập email sai) rồi T3 (Nhập mật khẩu yếu).\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Form báo lỗi liên tiếp và nút submit bị vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Nút submit bị khóa.: expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-020\";const desc=\"T1 (Nh\\u1EADp email sai) r\\u1ED3i T3 (Nh\\u1EADp m\\u1EADt kh\\u1EA9u y\\u1EBFu).\";const expected=\"Form b\\xE1o l\\u1ED7i li\\xEAn ti\\u1EBFp v\\xE0 n\\xFAt submit b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng c\\u1EADp nh\\u1EADt c\\xE1c l\\u1ED7i t\\u01B0\\u01A1ng \\u1EE9ng\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"invalidemail\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"123\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt submit b\\u1ECB kh\\xF3a.\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Nút submit bị khóa.: expected null to equal 'true'",
+                    "estack": "AssertionError: Nút submit bị khóa.: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:409:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:399:7)",
+                    "diff": null
+                  },
+                  "uuid": "c4fe404a-213c-4449-b15a-465eccab3059",
+                  "parentUUID": "ec4f907f-d56f-48cd-9f77-5a3ee574f66c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-021: Đang nhập sai sửa lại cho đúng (T1 -> T4)",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 3. 1-switch (Cặp transition liên tiếp) TC-FR-01-021: Đang nhập sai sửa lại cho đúng (T1 -> T4)",
+                  "timedOut": false,
+                  "duration": 546,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-021-2026-07-15T15-37-29-623Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-021\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"T1 (Mật khẩu yếu) rồi T4 (Sửa mật khẩu mạnh và điền thông tin đúng).\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Ẩn lỗi, kích hoạt nút Đăng ký.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"no such element: Unable to locate element: {\\\"method\\\":\\\"xpath\\\",\\\"selector\\\":\\\"//label[contains(text(), 'Xác nhận')]/following-sibling::input\\\"}\\n  (Session info: chrome=150.0.7871.124)\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-021\";const desc=\"T1 (M\\u1EADt kh\\u1EA9u y\\u1EBFu) r\\u1ED3i T4 (S\\u1EEDa m\\u1EADt kh\\u1EA9u m\\u1EA1nh v\\xE0 \\u0111i\\u1EC1n th\\xF4ng tin \\u0111\\xFAng).\";const expected=\"\\u1EA8n l\\u1ED7i, k\\xEDch ho\\u1EA1t n\\xFAt \\u0110\\u0103ng k\\xFD.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"N\\xFAt submit v\\u1EABn b\\u1ECB kh\\xF3a ho\\u1EB7c l\\u1ED7i c\\xF2n hi\\u1EC3n th\\u1ECB\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);const passwordInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\"));await passwordInput.sendKeys(\"123\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van A\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"new_user@domain.com\");await passwordInput.clear();await passwordInput.sendKeys(\"Test 1234\");const confirmPasswordInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'X\\xE1c nh\\u1EADn')]/following-sibling::input\"));await confirmPasswordInput.sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.not.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i \\u0111\\u01B0\\u1EE3c k\\xEDch ho\\u1EA1t.\")},driver)",
+                  "err": {
+                    "message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//label[contains(text(), 'Xác nhận')]/following-sibling::input\"}\n  (Session info: chrome=150.0.7871.124)",
+                    "estack": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//label[contains(text(), 'Xác nhận')]/following-sibling::input\"}\n  (Session info: chrome=150.0.7871.124)\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:523:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:527:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:459:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Driver.execute (node_modules\\selenium-webdriver\\lib\\webdriver.js:745:17)\n    at async <anonymous> (tests\\FR-01.register.test.ts:432:38)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:418:7)",
+                    "diff": null
+                  },
+                  "uuid": "57cbbaa6-78f5-4eef-aff3-47e921b8a4ab",
+                  "parentUUID": "ec4f907f-d56f-48cd-9f77-5a3ee574f66c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-022: Đang nhập sai bấm reset form (T1 -> T5)",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 3. 1-switch (Cặp transition liên tiếp) TC-FR-01-022: Đang nhập sai bấm reset form (T1 -> T5)",
+                  "timedOut": false,
+                  "duration": 264,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-022-2026-07-15T15-37-30-511Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-022\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"T1 (Nhập email sai) rồi T5 (Reload trang).\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Form quay lại trống rỗng ban đầu, nút submit bị vô hiệu hóa.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-022\";const desc=\"T1 (Nh\\u1EADp email sai) r\\u1ED3i T5 (Reload trang).\";const expected=\"Form quay l\\u1EA1i tr\\u1ED1ng r\\u1ED7ng ban \\u0111\\u1EA7u, n\\xFAt submit b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Form kh\\xF4ng reset sau reload\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"invalidemail\");await driver.navigate().refresh();const emailVal=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).getAttribute(\"value\");(0,import_chai.expect)(emailVal).to.equal(\"\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\")},driver)",
+                  "err": {
+                    "message": "AssertionError: expected null to equal 'true'",
+                    "estack": "AssertionError: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:458:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:446:7)",
+                    "diff": null
+                  },
+                  "uuid": "0d8a6c8d-7001-4c0d-b62c-a25c3e64a6a5",
+                  "parentUUID": "ec4f907f-d56f-48cd-9f77-5a3ee574f66c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-023: Đang sẵn sàng chuyển sang sai (T2 -> T6)",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 3. 1-switch (Cặp transition liên tiếp) TC-FR-01-023: Đang sẵn sàng chuyển sang sai (T2 -> T6)",
+                  "timedOut": false,
+                  "duration": 340,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-023-2026-07-15T15-37-31-495Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-023\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"T2 (Điền thông tin đúng) rồi T6 (Xóa mật khẩu).\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Hiển thị lỗi thiếu mật khẩu và nút submit bị vô hiệu hóa trở lại.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Nút submit phải bị vô hiệu hóa khi thiếu mật khẩu.: expected null to equal 'true'\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-023\";const desc=\"T2 (\\u0110i\\u1EC1n th\\xF4ng tin \\u0111\\xFAng) r\\u1ED3i T6 (X\\xF3a m\\u1EADt kh\\u1EA9u).\";const expected=\"Hi\\u1EC3n th\\u1ECB l\\u1ED7i thi\\u1EBFu m\\u1EADt kh\\u1EA9u v\\xE0 n\\xFAt submit b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a tr\\u1EDF l\\u1EA1i.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"N\\xFAt submit kh\\xF4ng b\\u1ECB kh\\xF3a\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van A\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"new_user@domain.com\");const passwordInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\"));await passwordInput.sendKeys(\"Test 1234\");await passwordInput.clear();const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));const isDisabled=await submitBtn.getAttribute(\"disabled\");(0,import_chai.expect)(isDisabled).to.equal(\"true\",\"N\\xFAt submit ph\\u1EA3i b\\u1ECB v\\xF4 hi\\u1EC7u h\\xF3a khi thi\\u1EBFu m\\u1EADt kh\\u1EA9u.\")},driver)",
+                  "err": {
+                    "message": "AssertionError: Nút submit phải bị vô hiệu hóa khi thiếu mật khẩu.: expected null to equal 'true'",
+                    "estack": "AssertionError: Nút submit phải bị vô hiệu hóa khi thiếu mật khẩu.: expected null to equal 'true'\n    at <anonymous> (tests\\FR-01.register.test.ts:481:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:467:7)",
+                    "diff": null
+                  },
+                  "uuid": "1ed18aee-7738-4b68-9e4a-01e5a4c62567",
+                  "parentUUID": "ec4f907f-d56f-48cd-9f77-5a3ee574f66c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-024: Điền thông tin đúng nhưng email bị trùng (T2 -> T8)",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 3. 1-switch (Cặp transition liên tiếp) TC-FR-01-024: Điền thông tin đúng nhưng email bị trùng (T2 -> T8)",
+                  "timedOut": false,
+                  "duration": 5717,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-024-2026-07-15T15-37-37-860Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-024\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"T2 (Điền thông tin trùng email) rồi T8 (Bấm Đăng ký).\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Hệ thống báo lỗi \\\"Email đã tồn tại\\\".\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Waiting for element to be located By(css selector, .bg-red-100)\\nWait timed out after 5199ms\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-024\";const desc=\"T2 (\\u0110i\\u1EC1n th\\xF4ng tin tr\\xF9ng email) r\\u1ED3i T8 (B\\u1EA5m \\u0110\\u0103ng k\\xFD).\";const expected='H\\u1EC7 th\\u1ED1ng b\\xE1o l\\u1ED7i \"Email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i\".';await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng b\\xE1o l\\u1ED7i tr\\xF9ng email\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van B\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"test@eshop.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();const errorDiv=await driver.wait(import_selenium_webdriver.until.elementLocated(import_selenium_webdriver.By.className(\"bg-red-100\")),5e3);const errorText=await errorDiv.getText();(0,import_chai.expect)(errorText).to.contain(\"Email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i\")},driver)",
+                  "err": {
+                    "message": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5199ms",
+                    "estack": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5199ms\n    at D:\\demo_automation_web\\selenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+                    "diff": null
+                  },
+                  "uuid": "dc63ef24-2e33-4bf2-9256-eb948988544c",
+                  "parentUUID": "ec4f907f-d56f-48cd-9f77-5a3ee574f66c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "c4fe404a-213c-4449-b15a-465eccab3059",
+                "57cbbaa6-78f5-4eef-aff3-47e921b8a4ab",
+                "0d8a6c8d-7001-4c0d-b62c-a25c3e64a6a5",
+                "1ed18aee-7738-4b68-9e4a-01e5a4c62567",
+                "dc63ef24-2e33-4bf2-9256-eb948988544c"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 7134,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "7e199522-e210-4629-9b6c-88d978c5428d",
+              "title": "4. End-to-end paths",
+              "fullFile": "D:\\demo_automation_web\\selenium\\tests\\FR-01.register.test.ts",
+              "file": "\\tests\\FR-01.register.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "TC-FR-01-030: Vòng đời đăng ký thành công trực tiếp (Happy Path)",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 4. End-to-end paths TC-FR-01-030: Vòng đời đăng ký thành công trực tiếp (Happy Path)",
+                  "timedOut": false,
+                  "duration": 516,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tcId=\"TC-FR-01-030\";const desc=\"S1 -> T2 (\\u0110i\\u1EC1n h\\u1EE3p l\\u1EC7) -> S3 -> T7 (Submit email m\\u1EDBi) -> S4 (\\u0110\\xE3 \\u0111\\u0103ng k\\xFD).\";const expected=\"\\u0110\\u0103ng k\\xFD th\\xE0nh c\\xF4ng v\\xE0 chuy\\u1EC3n h\\u01B0\\u1EDBng sang trang \\u0111\\u0103ng nh\\u1EADp.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Kh\\xF4ng chuy\\u1EC3n h\\u01B0\\u1EDBng sang trang \\u0111\\u0103ng nh\\u1EADp\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van Happy\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).sendKeys(\"happy_user@domain.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");try{const confirm=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'X\\xE1c nh\\u1EADn')]/following-sibling::input\"));await confirm.sendKeys(\"Test 1234\")}catch(e){}const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();await driver.wait(import_selenium_webdriver.until.urlContains(\"/login\"),5e3);const currentUrl=await driver.getCurrentUrl();(0,import_chai.expect)(currentUrl).to.contain(\"/login\")},driver)",
+                  "err": {},
+                  "uuid": "d2c9bb86-1366-4a93-8f32-1ce336de9f78",
+                  "parentUUID": "7e199522-e210-4629-9b6c-88d978c5428d",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-031: Đăng ký trùng email, sửa lại và thành công",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 4. End-to-end paths TC-FR-01-031: Đăng ký trùng email, sửa lại và thành công",
+                  "timedOut": false,
+                  "duration": 5473,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Bug Screenshot\",\n    \"value\": \"../bug-snapshots/TC-FR-01-031-2026-07-15T15-37-45-184Z.png\"\n  },\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-031\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"S1 -> T2 (Điền email trùng) -> S3 -> T8 (Bấm đăng ký -> Báo trùng) -> S5 -> T11 (Đổi email mới) -> S3 -> T7 (Submit) -> S4.\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"Lần đầu báo trùng email, sửa email mới thì đăng ký thành công và chuyển hướng.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"Waiting for element to be located By(css selector, .bg-red-100)\\nWait timed out after 5151ms\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-031\";const desc=\"S1 -> T2 (\\u0110i\\u1EC1n email tr\\xF9ng) -> S3 -> T8 (B\\u1EA5m \\u0111\\u0103ng k\\xFD -> B\\xE1o tr\\xF9ng) -> S5 -> T11 (\\u0110\\u1ED5i email m\\u1EDBi) -> S3 -> T7 (Submit) -> S4.\";const expected=\"L\\u1EA7n \\u0111\\u1EA7u b\\xE1o tr\\xF9ng email, s\\u1EEDa email m\\u1EDBi th\\xEC \\u0111\\u0103ng k\\xFD th\\xE0nh c\\xF4ng v\\xE0 chuy\\u1EC3n h\\u01B0\\u1EDBng.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"\\u0110\\u0103ng k\\xFD kh\\xF4ng th\\xE0nh c\\xF4ng sau khi s\\u1EEDa email\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van Fixed\");const emailInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\"));await emailInput.sendKeys(\"test@eshop.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");const submitBtn=await driver.findElement(import_selenium_webdriver.By.xpath(\"//button[@type='submit']\"));await submitBtn.click();await driver.wait(import_selenium_webdriver.until.elementLocated(import_selenium_webdriver.By.className(\"bg-red-100\")),5e3);await emailInput.clear();await emailInput.sendKeys(\"fixed_user@domain.com\");await submitBtn.click();await driver.wait(import_selenium_webdriver.until.urlContains(\"/login\"),5e3);const currentUrl=await driver.getCurrentUrl();(0,import_chai.expect)(currentUrl).to.contain(\"/login\")},driver)",
+                  "err": {
+                    "message": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5151ms",
+                    "estack": "TimeoutError: Waiting for element to be located By(css selector, .bg-red-100)\nWait timed out after 5151ms\n    at D:\\demo_automation_web\\selenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
+                    "diff": null
+                  },
+                  "uuid": "6875f99e-3ee1-4107-91de-7a6ba06d2c18",
+                  "parentUUID": "7e199522-e210-4629-9b6c-88d978c5428d",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-032: Nhập thông tin lỗi, sửa lại rồi reset trang",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 4. End-to-end paths TC-FR-01-032: Nhập thông tin lỗi, sửa lại rồi reset trang",
+                  "timedOut": false,
+                  "duration": 599,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tcId=\"TC-FR-01-032\";const desc=\"S1 -> T1 (Nh\\u1EADp l\\u1ED7i) -> S2 -> T4 (S\\u1EEDa l\\u1EA1i \\u0111\\xFAng) -> S3 -> T9 (Reload trang) -> S1.\";const expected=\"Nh\\u1EADp l\\u1ED7i, s\\u1EEDa \\u0111\\xFAng, reload trang th\\xEC form quay v\\u1EC1 tr\\u1ED1ng ho\\xE0n to\\xE0n.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"Form kh\\xF4ng quay v\\u1EC1 tr\\u1ED1ng r\\u1ED7ng\",\"UI\",async()=>{await driver.get(`${import_config.CONFIG.BASE_URL}/register`);const emailInput=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\"));await emailInput.sendKeys(\"invalidemail\");await emailInput.clear();await emailInput.sendKeys(\"happy_user@domain.com\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'H\\u1ECD T\\xEAn')]/following-sibling::input\")).sendKeys(\"Nguyen Van A\");await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'M\\u1EADt kh\\u1EA9u')]/following-sibling::input\")).sendKeys(\"Test 1234\");await driver.navigate().refresh();const emailVal=await driver.findElement(import_selenium_webdriver.By.xpath(\"//label[contains(text(), 'Email')]/following-sibling::input\")).getAttribute(\"value\");(0,import_chai.expect)(emailVal).to.equal(\"\")},driver)",
+                  "err": {},
+                  "uuid": "f0c69bdf-2f27-4c35-8616-ad5c4bc65581",
+                  "parentUUID": "7e199522-e210-4629-9b6c-88d978c5428d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d2c9bb86-1366-4a93-8f32-1ce336de9f78",
+                "f0c69bdf-2f27-4c35-8616-ad5c4bc65581"
+              ],
+              "failures": [
+                "6875f99e-3ee1-4107-91de-7a6ba06d2c18"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 6588,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            },
+            {
+              "uuid": "ffd1386f-dbb9-478b-97eb-409de24622eb",
+              "title": "5. API Level tests",
+              "fullFile": "D:\\demo_automation_web\\selenium\\tests\\FR-01.register.test.ts",
+              "file": "\\tests\\FR-01.register.test.ts",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "TC-FR-01-API-007: Đăng ký thành công via API",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 5. API Level tests TC-FR-01-API-007: Đăng ký thành công via API",
+                  "timedOut": false,
+                  "duration": 34,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tcId=\"TC-FR-01-007 (API)\";const desc=\"G\\u1EEDi request \\u0111\\u0103ng k\\xFD t\\xE0i kho\\u1EA3n v\\u1EDBi email ch\\u01B0a t\\u1ED3n t\\u1EA1i.\";const expected=\"API tr\\u1EA3 v\\u1EC1 status 200 OK v\\xE0 th\\xF4ng b\\xE1o \\u0111\\u0103ng k\\xFD th\\xE0nh c\\xF4ng.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"API tr\\u1EA3 v\\u1EC1 m\\xE3 l\\u1ED7i ho\\u1EB7c th\\u1EA5t b\\u1EA1i\",\"API\",async()=>{const response=await(0,import_api.registerAPI)(\"Nguyen Van API\",\"api_user@domain.com\",\"Test1234!\");(0,import_chai.expect)(response.status).to.equal(200,\"API \\u0111\\u0103ng k\\xFD ph\\u1EA3i tr\\u1EA3 v\\u1EC1 m\\xE3 200 OK\");const data=await response.json();(0,import_chai.expect)(data.message).to.equal(\"User registered successfully\")})",
+                  "err": {},
+                  "uuid": "934c44e2-7b9d-4a90-af14-8bb3002383be",
+                  "parentUUID": "ffd1386f-dbb9-478b-97eb-409de24622eb",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "TC-FR-01-API-008: Đăng ký thất bại với email đã tồn tại via API",
+                  "fullTitle": "FR-01: Đăng ký tài khoản (Account Registration) 5. API Level tests TC-FR-01-API-008: Đăng ký thất bại với email đã tồn tại via API",
+                  "timedOut": false,
+                  "duration": 5,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Test Case ID\",\n    \"value\": \"TC-FR-01-008 (API)\"\n  },\n  {\n    \"title\": \"Description\",\n    \"value\": \"Gửi request đăng ký với email đã tồn tại (test@eshop.com).\"\n  },\n  {\n    \"title\": \"Expected\",\n    \"value\": \"API trả về status 400 Bad Request và thông báo lỗi email đã tồn tại.\"\n  },\n  {\n    \"title\": \"Actual\",\n    \"value\": \"API trùng email phải trả về mã 400 Bad Request: expected 200 to equal 400\"\n  }\n]",
+                  "code": "const tcId=\"TC-FR-01-008 (API)\";const desc=\"G\\u1EEDi request \\u0111\\u0103ng k\\xFD v\\u1EDBi email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i (test@eshop.com).\";const expected=\"API tr\\u1EA3 v\\u1EC1 status 400 Bad Request v\\xE0 th\\xF4ng b\\xE1o l\\u1ED7i email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i.\";await(0,import_bugReporter.captureOnFail)(this,tcId,desc,expected,\"API tr\\u1EA3 v\\u1EC1 status 200 \\u0111\\u0103ng k\\xFD th\\xE0nh c\\xF4ng tr\\xF9ng email\",\"API\",async()=>{const response=await(0,import_api.registerAPI)(\"Duplicate User\",\"test@eshop.com\",\"Test1234!\");(0,import_chai.expect)(response.status).to.equal(400,\"API tr\\xF9ng email ph\\u1EA3i tr\\u1EA3 v\\u1EC1 m\\xE3 400 Bad Request\");const data=await response.json();(0,import_chai.expect)(data.error).to.contain(\"Email \\u0111\\xE3 t\\u1ED3n t\\u1EA1i\")})",
+                  "err": {
+                    "message": "AssertionError: API trùng email phải trả về mã 400 Bad Request: expected 200 to equal 400",
+                    "estack": "AssertionError: API trùng email phải trả về mã 400 Bad Request: expected 200 to equal 400\n    at <anonymous> (tests\\FR-01.register.test.ts:617:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async captureOnFail (utils\\bugReporter.ts:21:5)\n    at async Context.<anonymous> (tests\\FR-01.register.test.ts:613:7)",
+                    "diff": "- 200\n+ 400\n"
+                  },
+                  "uuid": "51225042-a0d1-4774-809a-877b8334ae2d",
+                  "parentUUID": "ffd1386f-dbb9-478b-97eb-409de24622eb",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "934c44e2-7b9d-4a90-af14-8bb3002383be"
+              ],
+              "failures": [
+                "51225042-a0d1-4774-809a-877b8334ae2d"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 39,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 60000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.8.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "index",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "reportFilename": "index",
+        "overwrite": "true",
+        "charts": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

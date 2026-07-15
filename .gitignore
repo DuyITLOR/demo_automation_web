@@ -9,12 +9,12 @@
 node_modules/
 
 # Automation artifacts (tự sinh khi chạy)
-mochawesome-report/
-reports/
-bug-snapshots/
-test-results/
-playwright-report/
-.cache/
+# mochawesome-report/
+# reports/
+# bug-snapshots/
+# test-results/
+# playwright-report/
+# .cache/
 
 # OS / editor
 .DS_Store
