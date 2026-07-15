@@ -48,9 +48,9 @@ Stack cố định của dự án này:
 ## BƯỚC 4 — Bug snapshot khi actual ≠ expected
 
 Bọc phần assert/quan sát trong `try/catch` (helper `captureOnFail`). Khi một `it()` fail:
-- **UI:** chụp `driver.takeScreenshot()` lưu PNG vào `selenium/bug-snapshots/<TC-ID>-<timestamp>.png`.
-- **Ghi log:** thêm một mục vào `selenium/bug-snapshots/BUGS.md` gồm: TC ID, mô tả, **Expected**, **Actual**, mức (UI/API), đường dẫn ảnh, thời điểm.
-- **Nhúng vào report HTML:** gọi `addContext(this, { title: 'Bug', value: <đường-dẫn-ảnh> })` (từ `mochawesome/addContext`) để đính ảnh + Expected/Actual vào đúng test fail → hiện ngay trong `mochawesome-report/index.html`. Đường dẫn ảnh phải **tương đối từ thư mục report** (VD `../bug-snapshots/<file>.png`) để thẻ `<img>` load được. Với TC mức API (không có `driver`), chỉ cần addContext text Expected/Actual.
+- **UI:** chụp `driver.takeScreenshot()` lưu PNG vào `selenium/bug-snapshots/<TC-ID>.png` — **tên file cố định theo TC-ID, GHI ĐÈ mỗi lần chạy** (KHÔNG gắn timestamp). Mục tiêu: **1 test case = 1 ảnh mới nhất**, tránh dồn hàng chục ảnh trùng khi chạy lại nhiều lần.
+- **Ghi log:** ghi mục vào `selenium/bug-snapshots/BUGS.md` (TC ID, mô tả, **Expected**, **Actual**, mức UI/API, đường dẫn ảnh, thời điểm). **BUGS.md phải được KHỞI TẠO LẠI ở đầu mỗi lần chạy** (root hook `before` / global setup xóa file cũ rồi ghi header) → chỉ chứa bug của lần chạy gần nhất, không dồn dòng trùng.
+- **Nhúng vào report HTML:** gọi `addContext(this, { title: 'Bug', value: '../bug-snapshots/<TC-ID>.png' })` (từ `mochawesome/addContext`) để đính ảnh + Expected/Actual vào đúng test fail → hiện ngay trong `mochawesome-report/index.html`. Đường dẫn ảnh **tương đối từ thư mục report**. Với TC mức API (không có `driver`), chỉ cần addContext text Expected/Actual.
 - Vẫn để test **fail** (throw lại lỗi) — snapshot chỉ để làm bằng chứng, không nuốt lỗi.
 
 ## BƯỚC 5 — Báo cáo HTML bằng mochawesome (selenium/mochawesome-report/)
@@ -103,8 +103,8 @@ selenium/
     index.json            # dữ liệu thô
     assets/               # css/js/font của mochawesome
   bug-snapshots/
-    BUGS.md               # nhật ký bug (Expected vs Actual + link ảnh)
-    <TC-ID>-<ts>.png      # ảnh bằng chứng (nhúng vào HTML report qua addContext)
+    BUGS.md               # nhật ký bug lần chạy gần nhất (reset mỗi lần chạy)
+    <TC-ID>.png           # ảnh bằng chứng — GHI ĐÈ mỗi lần chạy (1 TC = 1 ảnh)
 ```
 
 ## Nguyên tắc
