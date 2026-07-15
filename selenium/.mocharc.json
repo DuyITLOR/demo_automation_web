@@ -1,0 +1,13 @@
+{
+  "extension": ["ts"],
+  "spec": "tests/**/*.test.ts",
+  "timeout": 60000,
+  "node-option": ["import=tsx"],
+  "reporter": "mochawesome",
+  "reporter-option": [
+    "reportDir=mochawesome-report",
+    "reportFilename=index",
+    "overwrite=true",
+    "charts=true"
+  ]
+}
