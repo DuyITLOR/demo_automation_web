@@ -60,7 +60,8 @@ Mở repo bằng **Claude Code**, rồi gõ:
 Các skill trong `.claude/skills/` viết theo chuẩn **Agent Skill** (mỗi skill là 1 folder chứa `SKILL.md`):
 
 - **Claude Code:** tự động nạp từ `.claude/skills/` → gõ `/tên-skill`.
-- **Agent / tool khác:** trỏ tới chính các folder `SKILL.md` này — nạp qua Skills API của Anthropic, Claude Agent SDK, hoặc cơ chế skill của agent đó. Cùng một nội dung, không cần chép lại.
+- **Codex / Antigravity / Cursor:** đọc [`AGENTS.md`](AGENTS.md) ở gốc repo — file chuẩn **xuyên-tool** mô tả repo + trỏ tới từng `SKILL.md` để agent mở khi task khớp. (Codex nạp `AGENTS.md` mỗi phiên; Antigravity đọc từ v1.20.3+.)
+- **Agent/tool khác:** trỏ thẳng tới các folder `SKILL.md` trong `.claude/skills/` — cùng nội dung, không cần chép lại.
 
 ---
 
