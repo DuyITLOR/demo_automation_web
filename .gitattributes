@@ -1,0 +1,4 @@
+# Shell script luôn LF (Windows autocrlf KHÔNG được đổi sang CRLF)
+*.sh text eol=lf
+# Node launcher (nếu có) cũng LF
+*.mjs text eol=lf
